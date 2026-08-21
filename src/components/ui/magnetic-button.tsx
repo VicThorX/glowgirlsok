@@ -55,13 +55,13 @@ export function MagneticButton({
 
   const variantStyles = {
     primary:
-      "bg-gradient-to-r from-rosegold-400 via-rosegold-300 to-champagne-300 text-obsidian-950 font-medium shadow-glow-rose hover:shadow-[0_0_35px_rgba(245,194,199,0.5)] border border-white/40",
+      "bg-gradient-to-r from-gold-300 via-gold-400 to-amber-500 text-obsidian-950 font-semibold shadow-glow-gold hover:shadow-[0_0_35px_rgba(216,180,74,0.55)] border border-gold-200/60",
     secondary:
-      "bg-white/[0.04] hover:bg-white/[0.08] text-white border border-white/10 hover:border-rosegold-300/40 backdrop-blur-md shadow-glow-subtle",
+      "bg-white/[0.04] hover:bg-white/[0.08] text-white border border-white/10 hover:border-gold-300/50 backdrop-blur-md shadow-glow-subtle",
     ghost:
-      "bg-transparent hover:bg-white/[0.04] text-pearl-200 hover:text-white border border-transparent hover:border-white/10",
+      "bg-transparent hover:bg-white/[0.04] text-pearl-200 hover:text-white border border-transparent hover:border-gold-300/20",
     glass:
-      "bg-obsidian-850/60 hover:bg-obsidian-850/80 text-pearl-100 border border-white/10 hover:border-rosegold-300/50 backdrop-blur-xl shadow-glass-inner",
+      "bg-obsidian-850/60 hover:bg-obsidian-850/80 text-pearl-100 border border-gold-400/20 hover:border-gold-300/50 backdrop-blur-xl shadow-glass-inner",
   };
 
   return (

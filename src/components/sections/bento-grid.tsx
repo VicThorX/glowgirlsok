@@ -25,22 +25,22 @@ export function BentoGrid() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rosegold-400/10 border border-rosegold-300/20 text-rosegold-200 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
-              <Sparkles className="w-3 h-3 text-rosegold-300" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-200 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+              <Sparkles className="w-3 h-3 text-gold-300" />
               Colecciones Insignia
             </div>
             <h2 className="font-serif text-3xl sm:text-5xl font-light text-white tracking-tight">
-              Fórmulas Dermoestéticas & Cuidado Capilar
+              Cosmética Botánica & Cuidado Capilar
             </h2>
           </div>
 
           {/* Category Filter Pills */}
-          <div className="flex items-center gap-2 p-1.5 rounded-full bg-white/[0.03] border border-white/[0.08] backdrop-blur-md self-start md:self-auto">
+          <div className="flex items-center gap-2 p-1.5 rounded-full bg-white/[0.03] border border-gold-400/20 backdrop-blur-md self-start md:self-auto">
             <button
               onClick={() => setActiveCategory("all")}
               className={`px-4 py-2 rounded-full text-xs font-medium tracking-wider transition-all cursor-pointer ${
                 activeCategory === "all"
-                  ? "bg-rosegold-300/20 text-white border border-rosegold-300/40 shadow-sm"
+                  ? "bg-gold-400/20 text-white border border-gold-400/40 shadow-sm"
                   : "text-pearl-300 hover:text-white"
               }`}
             >
@@ -50,7 +50,7 @@ export function BentoGrid() {
               onClick={() => setActiveCategory("skincare")}
               className={`px-4 py-2 rounded-full text-xs font-medium tracking-wider transition-all cursor-pointer ${
                 activeCategory === "skincare"
-                  ? "bg-rosegold-300/20 text-white border border-rosegold-300/40 shadow-sm"
+                  ? "bg-gold-400/20 text-white border border-gold-400/40 shadow-sm"
                   : "text-pearl-300 hover:text-white"
               }`}
             >
@@ -60,7 +60,7 @@ export function BentoGrid() {
               onClick={() => setActiveCategory("haircare")}
               className={`px-4 py-2 rounded-full text-xs font-medium tracking-wider transition-all cursor-pointer ${
                 activeCategory === "haircare"
-                  ? "bg-rosegold-300/20 text-white border border-rosegold-300/40 shadow-sm"
+                  ? "bg-gold-400/20 text-white border border-gold-400/40 shadow-sm"
                   : "text-pearl-300 hover:text-white"
               }`}
             >
@@ -95,19 +95,19 @@ export function BentoGrid() {
                 >
                   <SpotlightCard
                     onClick={() => setSelectedProduct(product)}
-                    className="h-full flex flex-col justify-between cursor-pointer p-6 sm:p-8"
+                    className="h-full flex flex-col justify-between cursor-pointer p-6 sm:p-8 border border-gold-400/30 hover:border-gold-300/70 hover:shadow-glow-gold-card bg-gradient-to-b from-obsidian-850/70 to-obsidian-900/90"
                   >
                     {/* Top Row: Tags & Price */}
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-2">
                         {product.badge && (
-                          <span className="px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-rosegold-400/20 text-rosegold-200 border border-rosegold-300/30">
+                          <span className="px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-gold-500/15 text-gold-200 border border-gold-400/30">
                             {product.badge}
                           </span>
                         )}
                         <span className="text-xs text-pearl-400 font-mono">{product.volume}</span>
                       </div>
-                      <span className="font-serif text-lg font-medium text-rosegold-200">
+                      <span className="font-serif text-lg font-semibold text-gold-300">
                         {formatPrice(product.price)}
                       </span>
                     </div>
@@ -116,7 +116,7 @@ export function BentoGrid() {
                     <div
                       className={`relative w-full ${
                         isLargeCard ? "aspect-[16/10] sm:aspect-[21/9]" : "aspect-[4/3] sm:aspect-[1/1]"
-                      } rounded-2xl overflow-hidden bg-obsidian-950/60 border border-white/[0.06] mb-6 flex items-center justify-center group/img`}
+                      } rounded-2xl overflow-hidden bg-obsidian-950/70 border border-gold-400/15 mb-6 flex items-center justify-center group/img`}
                     >
                       <Image
                         src={product.image}
@@ -129,7 +129,7 @@ export function BentoGrid() {
 
                       {/* Floating View Icon Overlay */}
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-opacity bg-obsidian-950/40 backdrop-blur-xs">
-                        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 border border-white/30 text-xs font-semibold text-white shadow-xl">
+                        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-400/20 border border-gold-300/40 text-xs font-semibold text-white shadow-xl">
                           <Eye className="w-4 h-4" />
                           Ver Ficha Completa
                         </span>
@@ -139,12 +139,12 @@ export function BentoGrid() {
                     {/* Bottom Metadata */}
                     <div className="flex flex-col justify-end">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-[11px] font-medium uppercase tracking-wider text-rosegold-300">
+                        <span className="text-[11px] font-medium uppercase tracking-wider text-gold-300">
                           {product.category === "skincare" ? "Skincare Facial" : "Hair Care Profesional"}
                         </span>
                       </div>
 
-                      <h3 className="font-serif text-2xl font-medium text-white group-hover:text-rosegold-200 transition-colors mb-2">
+                      <h3 className="font-serif text-2xl font-medium text-white group-hover:text-gold-200 transition-colors mb-2">
                         {product.name}
                       </h3>
 
@@ -153,13 +153,13 @@ export function BentoGrid() {
                       </p>
 
                       {/* Active Ingredients & Action Bar */}
-                      <div className="flex items-center justify-between pt-4 border-t border-white/[0.06] gap-4">
+                      <div className="flex items-center justify-between pt-4 border-t border-gold-400/15 gap-4">
                         <div className="flex items-center gap-1.5 text-xs text-pearl-400 truncate">
-                          <Droplets className="w-3.5 h-3.5 text-rosegold-300 shrink-0" />
+                          <Droplets className="w-3.5 h-3.5 text-gold-300 shrink-0" />
                           <span className="truncate">{product.highlightKey}</span>
                         </div>
 
-                        <span className="inline-flex items-center gap-1 text-xs font-medium text-white group-hover:text-rosegold-300 transition-colors shrink-0">
+                        <span className="inline-flex items-center gap-1 text-xs font-medium text-white group-hover:text-gold-300 transition-colors shrink-0">
                           <span>Detalles</span>
                           <ArrowUpRight className="w-3.5 h-3.5" />
                         </span>

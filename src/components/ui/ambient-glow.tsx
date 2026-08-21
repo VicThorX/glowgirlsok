@@ -43,7 +43,7 @@ export function AmbientGlow() {
 
   return (
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden select-none">
-      {/* Primary Dynamic Rose Gold Glow Orb (Blur > 120px) */}
+      {/* Primary Dynamic Luxury Gold Glow Orb (Blur > 120px) */}
       <motion.div
         style={{
           x: smoothX,
@@ -51,10 +51,10 @@ export function AmbientGlow() {
           translateX: "-50%",
           translateY: "-50%",
         }}
-        className="absolute w-[680px] h-[680px] rounded-full bg-[radial-gradient(circle,rgba(244,208,214,0.14)_0%,rgba(217,114,126,0.06)_40%,transparent_70%)] blur-[130px] gpu-layer"
+        className="absolute w-[680px] h-[680px] rounded-full bg-[radial-gradient(circle,rgba(229,205,117,0.12)_0%,rgba(200,154,37,0.06)_40%,transparent_70%)] blur-[130px] gpu-layer"
       />
 
-      {/* Secondary Dynamic Champagne Halo (Blur > 140px) */}
+      {/* Secondary Dynamic Warm Champagne & Rose Aura (Blur > 140px) */}
       <motion.div
         style={{
           x: secondaryX,
@@ -62,21 +62,21 @@ export function AmbientGlow() {
           translateX: "-50%",
           translateY: "-50%",
         }}
-        className="absolute w-[580px] h-[580px] rounded-full bg-[radial-gradient(circle,rgba(232,213,196,0.11)_0%,rgba(203,169,120,0.04)_45%,transparent_70%)] blur-[150px] gpu-layer"
+        className="absolute w-[580px] h-[580px] rounded-full bg-[radial-gradient(circle,rgba(247,240,212,0.10)_0%,rgba(216,180,74,0.04)_45%,transparent_70%)] blur-[150px] gpu-layer"
       />
 
       {/* Static Atmospheric Anchors */}
-      <div className="absolute -top-48 -right-48 w-[800px] h-[800px] rounded-full bg-[radial-gradient(circle,rgba(244,208,214,0.09)_0%,transparent_65%)] blur-[160px] pointer-events-none" />
+      <div className="absolute -top-48 -right-48 w-[800px] h-[800px] rounded-full bg-[radial-gradient(circle,rgba(229,205,117,0.08)_0%,transparent_65%)] blur-[160px] pointer-events-none" />
       <div className="absolute top-[40%] -left-48 w-[700px] h-[700px] rounded-full bg-[radial-gradient(circle,rgba(16,185,129,0.04)_0%,transparent_65%)] blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-[-15%] right-[-10%] w-[900px] h-[900px] rounded-full bg-[radial-gradient(circle,rgba(232,213,196,0.08)_0%,transparent_65%)] blur-[170px] pointer-events-none" />
+      <div className="absolute bottom-[-15%] right-[-10%] w-[900px] h-[900px] rounded-full bg-[radial-gradient(circle,rgba(216,180,74,0.07)_0%,transparent_65%)] blur-[170px] pointer-events-none" />
 
       {/* Floating Bioluminescent Micro-Sparkles */}
       {mounted && (
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/5 w-1 h-1 rounded-full bg-rosegold-200 opacity-60 animate-float-gentle blur-[0.5px]" />
-          <div className="absolute top-1/3 right-1/4 w-1.5 h-1.5 rounded-full bg-champagne-300 opacity-50 animate-float-delayed blur-[0.5px]" />
+          <div className="absolute top-1/4 left-1/5 w-1 h-1 rounded-full bg-gold-200 opacity-60 animate-float-gentle blur-[0.5px]" />
+          <div className="absolute top-1/3 right-1/4 w-1.5 h-1.5 rounded-full bg-gold-300 opacity-50 animate-float-delayed blur-[0.5px]" />
           <div className="absolute top-2/3 left-1/3 w-1 h-1 rounded-full bg-white opacity-40 animate-float-gentle blur-[0.5px]" />
-          <div className="absolute top-3/4 right-1/5 w-1.5 h-1.5 rounded-full bg-rosegold-300 opacity-60 animate-float-delayed blur-[0.5px]" />
+          <div className="absolute top-3/4 right-1/5 w-1.5 h-1.5 rounded-full bg-gold-400 opacity-60 animate-float-delayed blur-[0.5px]" />
         </div>
       )}
 

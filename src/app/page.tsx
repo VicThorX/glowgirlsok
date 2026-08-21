@@ -8,7 +8,7 @@ import { Footer } from "@/components/sections/footer";
 
 export default function Home() {
   return (
-    <main className="relative flex min-h-screen flex-col bg-obsidian-900 text-foreground overflow-x-hidden selection:bg-rosegold-300/30 selection:text-white">
+    <main className="relative flex min-h-screen flex-col bg-obsidian-900 text-foreground overflow-x-hidden selection:bg-gold-400/30 selection:text-white">
       {/* Floating Editorial Navigation */}
       <Navbar />
 

@@ -26,13 +26,16 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://glowgirls.com.ar"),
-  title: "Glow Girls | Cosmética Botánica & Cuidado Capilar de Alta Gama",
+  metadataBase: new URL("https://glowgirlsok.com.ar"),
+  title: "Glowgirlsok | Cosmética Botánica · Capilar · Skincare",
   description:
-    "Descubre la alquimia de una piel luminosa y un cabello radiante. Fórmulas botánicas puras, biotecnología dermoestética y resultados clínicos visibles.",
+    "La alquimia de una piel y cabello radiante. Fórmulas botánicas puras, cuidado capilar de alta gama y skincare con resultados visibles.",
   keywords: [
-    "Glow Girls",
     "Glowgirlsok",
+    "Glow Girls",
+    "Cosmética Botánica",
+    "Capilar",
+    "Skincare",
     "Skincare premium",
     "Tónico de Rosas",
     "Niacinamida Pantenol",
@@ -40,18 +43,18 @@ export const metadata: Metadata = {
     "Cosmética Botánica Argentina",
     "Clean Beauty",
   ],
-  authors: [{ name: "Glow Girls Studio" }],
+  authors: [{ name: "Glowgirlsok" }],
   openGraph: {
-    title: "Glow Girls | Cosmética Botánica & Dermoestética",
-    description: "Fórmulas puras, biotecnología y el resplandor natural que tu piel y cabello merecen.",
-    url: "https://glowgirls.com.ar",
-    siteName: "Glow Girls",
+    title: "Glowgirlsok | Cosmética Botánica · Capilar · Skincare",
+    description: "La alquimia de una piel y cabello radiante. Fórmulas botánicas puras y cuidado de alta gama.",
+    url: "https://glowgirlsok.com.ar",
+    siteName: "Glowgirlsok",
     images: [
       {
         url: "/brand/logo.png",
         width: 800,
         height: 800,
-        alt: "Glow Girls Skin & Hair Care",
+        alt: "Glowgirlsok | Cosmética Botánica · Capilar · Skincare",
       },
     ],
     locale: "es_AR",
@@ -59,8 +62,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Glow Girls | Cosmética Botánica & Cuidado Capilar",
-    description: "La alquimia perfecta entre ciencia botánica y belleza estética.",
+    title: "Glowgirlsok | Cosmética Botánica · Capilar · Skincare",
+    description: "La alquimia de una piel y cabello radiante. Fórmulas puras y resultados visibles.",
     images: ["/brand/logo.png"],
   },
   icons: {
@@ -81,7 +84,7 @@ export default function RootLayout({
     >
       <body
         suppressHydrationWarning
-        className="font-sans bg-obsidian-900 text-foreground selection:bg-rosegold-300/30 selection:text-white antialiased min-h-screen relative overflow-x-hidden"
+        className="font-sans bg-obsidian-900 text-foreground selection:bg-gold-400/30 selection:text-white antialiased min-h-screen relative overflow-x-hidden"
       >
         {/* Interactive Ambient Glow & Noise */}
         <AmbientGlow />

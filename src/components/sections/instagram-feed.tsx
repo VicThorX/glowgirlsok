@@ -62,9 +62,9 @@ export function InstagramFeed() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rosegold-400/10 border border-rosegold-300/20 text-rosegold-200 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
-              <Sparkles className="w-3 h-3 text-rosegold-300" />
-              Comunidad Glow Girls
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-200 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+              <Sparkles className="w-3 h-3 text-gold-300" />
+              Comunidad Glowgirlsok
             </div>
             <h2 className="font-serif text-3xl sm:text-5xl font-light text-white tracking-tight">
               Resultados Reales en Piel & Cabello
@@ -97,10 +97,10 @@ export function InstagramFeed() {
             >
               <Card3DTilt
                 maxTilt={10}
-                className="h-full rounded-3xl border border-white/[0.08] bg-obsidian-850/60 p-4 backdrop-blur-md hover:border-rosegold-300/40 transition-all duration-500 group"
+                className="h-full rounded-3xl border border-gold-400/25 bg-gradient-to-b from-obsidian-850/70 to-obsidian-900/90 p-4 backdrop-blur-md hover:border-gold-300/60 hover:shadow-glow-gold-card transition-all duration-500 group"
               >
                 {/* Image Container with Inertial Zoom */}
-                <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-obsidian-950 mb-4">
+                <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-obsidian-950/70 border border-gold-400/15 mb-4">
                   <Image
                     src={post.image}
                     alt={post.product}
@@ -111,13 +111,13 @@ export function InstagramFeed() {
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
                   {/* Top Badge */}
-                  <span className="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-obsidian-900/80 backdrop-blur-md text-rosegold-200 border border-white/10">
+                  <span className="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-obsidian-900/85 backdrop-blur-md text-gold-200 border border-gold-400/30">
                     {post.product}
                   </span>
 
                   {/* Likes pill */}
-                  <div className="absolute bottom-3 right-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-obsidian-900/80 backdrop-blur-md border border-white/10 text-xs text-white">
-                    <Heart className="w-3.5 h-3.5 text-rosegold-400 fill-current" />
+                  <div className="absolute bottom-3 right-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-obsidian-900/85 backdrop-blur-md border border-white/10 text-xs text-white">
+                    <Heart className="w-3.5 h-3.5 text-gold-400 fill-current" />
                     <span>{post.likes}</span>
                   </div>
                 </div>
@@ -128,7 +128,7 @@ export function InstagramFeed() {
                     &ldquo;{post.caption}&rdquo;
                   </p>
                   <div className="flex items-center justify-between text-[11px] text-pearl-400">
-                    <span className="font-medium text-rosegold-300">{post.user}</span>
+                    <span className="font-medium text-gold-300">{post.user}</span>
                     <span className="text-pearl-500 uppercase tracking-wider text-[10px]">Cliente Verificada</span>
                   </div>
                 </div>

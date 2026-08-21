@@ -246,17 +246,17 @@ export const PRODUCTS: Product[] = [
 
 export const BRAND_STATS = [
   { value: "100%", label: "Fórmulas Botánicas Puras", sub: "Libre de parabenos & sulfatos agresivos" },
-  { value: "+18.500", label: "Pieles Transformadas", sub: "Comunidad Glow Girls en todo el país" },
+  { value: "+18.500", label: "Pieles Transformadas", sub: "Comunidad Glowgirlsok en todo el país" },
   { value: "0%", label: "Crueldad Animal", sub: "Certificación 100% Cruelty-Free & Ética" },
   { value: "24-48h", label: "Envíos Express", sub: "Despachos protegidos a toda Argentina" },
 ];
 
 export const MARQUEE_ITEMS = [
-  "✦ FÓRMULAS BOTÁNICAS LIMPIAS",
-  "✦ BIOTECNOLOGÍA DERMOESTÉTICA",
-  "✦ CRUELTY FREE & VEGAN FORMULAS",
-  "✦ EXTRACTOS VEGETALES DE ALTA PUREZA",
-  "✦ SENSORIALIDAD Y LUJO CONTEMPORÁNEO",
+  "✦ GLOWGIRLSOK | BOTÁNICA · CAPILAR · SKINCARE",
+  "✦ LA ALQUIMIA DE UNA PIEL Y CABELLO RADIANTE",
+  "✦ FÓRMULAS BOTÁNICAS PURAS & LIMPIAS",
+  "✦ CUIDADO CAPILAR DE ALTA GAMA",
+  "✦ CRUELTY FREE & SENSORIALIDAD DE LUJO",
   "✦ GLOW REAL PARA PIEL & CABELLO",
   "✦ DERMATOLÓGICAMENTE TESTEADO",
 ];

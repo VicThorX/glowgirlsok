@@ -14,19 +14,19 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto">
         {/* Top Feature Bar */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pb-16 border-b border-white/[0.08] mb-16">
-          <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/[0.05]">
-            <div className="p-3 rounded-xl bg-rosegold-400/10 text-rosegold-200">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pb-16 border-b border-gold-400/15 mb-16">
+          <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.02] border border-gold-400/15 hover:border-gold-300/40 transition-colors">
+            <div className="p-3 rounded-xl bg-gold-400/10 text-gold-300 shadow-glow-gold">
               <Truck className="w-5 h-5" />
             </div>
             <div>
               <h4 className="font-serif text-white text-base font-medium">Envíos a Todo el País</h4>
-              <p className="text-xs text-pearl-400">Embalaje reforzado y entregas 24-48h</p>
+              <p className="text-xs text-pearl-400">Embalaje reforzado y entregas express</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/[0.05]">
-            <div className="p-3 rounded-xl bg-rosegold-400/10 text-rosegold-200">
+          <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.02] border border-gold-400/15 hover:border-gold-300/40 transition-colors">
+            <div className="p-3 rounded-xl bg-gold-400/10 text-gold-300 shadow-glow-gold">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
@@ -35,8 +35,8 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/[0.05]">
-            <div className="p-3 rounded-xl bg-rosegold-400/10 text-rosegold-200">
+          <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.02] border border-gold-400/15 hover:border-gold-300/40 transition-colors">
+            <div className="p-3 rounded-xl bg-gold-400/10 text-gold-300 shadow-glow-gold">
               <Sparkles className="w-5 h-5" />
             </div>
             <div>
@@ -51,27 +51,27 @@ export function Footer() {
           {/* Brand Info */}
           <div className="md:col-span-5 flex flex-col items-start">
             <Link href="/" className="flex items-center gap-3 mb-4 group">
-              <div className="relative w-10 h-10 rounded-full overflow-hidden border border-rosegold-300/40 p-1 bg-rosegold-400/10">
+              <div className="relative w-10 h-10 rounded-full overflow-hidden border border-gold-400/40 p-1 bg-gold-400/10 shadow-glow-gold">
                 <Image
                   src="/brand/logo.png"
-                  alt="Glow Girls"
+                  alt="Glowgirlsok"
                   fill
                   sizes="40px"
                   className="object-cover rounded-full"
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-2xl font-semibold tracking-wider text-white">
-                  Glow Girls
+                <span className="font-serif text-2xl font-semibold tracking-wider text-white group-hover:text-gold-200 transition-colors">
+                  Glowgirlsok
                 </span>
-                <span className="text-[10px] uppercase tracking-[0.25em] text-rosegold-300 font-medium">
-                  Skin & Hair Care
+                <span className="text-[10px] uppercase tracking-[0.22em] text-gold-300 font-medium">
+                  Botánica · Capilar · Skincare
                 </span>
               </div>
             </Link>
 
             <p className="text-sm text-pearl-400 max-w-sm leading-relaxed mb-6">
-              Cosmética botánica y biotecnología dermoestética diseñada para despertar la luminosidad intrínseca de tu piel y la fuerza de tu cabello.
+              Cosmética botánica, cuidado capilar y skincare de alta gama diseñados para despertar la luminosidad intrínseca de tu piel y la fuerza de tu cabello.
             </p>
 
             <div className="flex items-center gap-3">
@@ -79,8 +79,8 @@ export function Footer() {
                 href="https://instagram.com/glowgirlsok"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-white/[0.04] hover:bg-white/[0.1] border border-white/10 text-pearl-200 hover:text-white transition-all hover:scale-105"
-                aria-label="Instagram"
+                className="p-3 rounded-full bg-white/[0.04] hover:bg-gold-400/10 border border-white/10 hover:border-gold-400/40 text-pearl-200 hover:text-gold-200 transition-all hover:scale-105"
+                aria-label="Instagram @glowgirlsok"
               >
                 <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -89,11 +89,11 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/5491123923931?text=Hola%20Glow%20Girls!%20Deseo%20hacer%20una%20consulta"
+                href="https://wa.me/5491123923931?text=Hola%20Glowgirlsok!%20Deseo%20hacer%20una%20consulta"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-white/[0.04] hover:bg-white/[0.1] border border-white/10 text-pearl-200 hover:text-white transition-all hover:scale-105"
-                aria-label="WhatsApp"
+                className="p-3 rounded-full bg-white/[0.04] hover:bg-gold-400/10 border border-white/10 hover:border-gold-400/40 text-pearl-200 hover:text-gold-200 transition-all hover:scale-105"
+                aria-label="WhatsApp Glowgirlsok"
               >
                 <MessageCircle className="w-4 h-4" />
               </a>
@@ -105,27 +105,27 @@ export function Footer() {
             <h4 className="font-serif text-white text-base font-medium mb-4">Skincare</h4>
             <ul className="space-y-2.5 text-xs text-pearl-400">
               <li>
-                <a href="#colecciones" className="hover:text-rosegold-300 transition-colors">
+                <a href="#colecciones" className="hover:text-gold-300 transition-colors">
                   Tónico de Rosas
                 </a>
               </li>
               <li>
-                <a href="#colecciones" className="hover:text-rosegold-300 transition-colors">
+                <a href="#colecciones" className="hover:text-gold-300 transition-colors">
                   Niacinamida + Pantenol
                 </a>
               </li>
               <li>
-                <a href="#colecciones" className="hover:text-rosegold-300 transition-colors">
+                <a href="#colecciones" className="hover:text-gold-300 transition-colors">
                   Crema Aloe Vera
                 </a>
               </li>
               <li>
-                <a href="#colecciones" className="hover:text-rosegold-300 transition-colors">
+                <a href="#colecciones" className="hover:text-gold-300 transition-colors">
                   Ácido Hialurónico
                 </a>
               </li>
               <li>
-                <a href="#colecciones" className="hover:text-rosegold-300 transition-colors">
+                <a href="#colecciones" className="hover:text-gold-300 transition-colors">
                   Vitamina C Nocturna
                 </a>
               </li>
@@ -137,27 +137,27 @@ export function Footer() {
             <h4 className="font-serif text-white text-base font-medium mb-4">Hair Care</h4>
             <ul className="space-y-2.5 text-xs text-pearl-400">
               <li>
-                <a href="#colecciones" className="hover:text-rosegold-300 transition-colors">
+                <a href="#colecciones" className="hover:text-gold-300 transition-colors">
                   Matizador Violeta
                 </a>
               </li>
               <li>
-                <a href="#colecciones" className="hover:text-rosegold-300 transition-colors">
+                <a href="#colecciones" className="hover:text-gold-300 transition-colors">
                   Intensificador de Rojos
                 </a>
               </li>
               <li>
-                <a href="#colecciones" className="hover:text-rosegold-300 transition-colors">
+                <a href="#colecciones" className="hover:text-gold-300 transition-colors">
                   Shampoo Neutro
                 </a>
               </li>
               <li>
-                <a href="#filosofia" className="hover:text-rosegold-300 transition-colors">
+                <a href="#filosofia" className="hover:text-gold-300 transition-colors">
                   Filosofía Clean
                 </a>
               </li>
               <li>
-                <a href="#rituales" className="hover:text-rosegold-300 transition-colors">
+                <a href="#rituales" className="hover:text-gold-300 transition-colors">
                   Guía de Rutinas
                 </a>
               </li>
@@ -165,9 +165,9 @@ export function Footer() {
           </div>
 
           {/* Consultation Card */}
-          <div className="md:col-span-3 p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] flex flex-col justify-between">
+          <div className="md:col-span-3 p-6 rounded-2xl bg-white/[0.02] border border-gold-400/20 flex flex-col justify-between hover:border-gold-300/40 transition-colors shadow-glow-gold-card">
             <div>
-              <div className="flex items-center gap-1.5 text-xs text-rosegold-300 font-semibold uppercase tracking-wider mb-2">
+              <div className="flex items-center gap-1.5 text-xs text-gold-300 font-semibold uppercase tracking-wider mb-2">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Atención Personal</span>
               </div>
@@ -178,7 +178,7 @@ export function Footer() {
             </div>
 
             <a
-              href="https://wa.me/5491123923931?text=Hola%20Glow%20Girls!%20Quiero%20asesoramiento"
+              href="https://wa.me/5491123923931?text=Hola%20Glowgirlsok!%20Quiero%20asesoramiento"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -192,11 +192,11 @@ export function Footer() {
 
         {/* Bottom Copyright */}
         <div className="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between text-xs text-pearl-500 gap-4">
-          <p>© {new Date().getFullYear()} Glow Girls (Glowgirlsok). Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Glowgirlsok (glowgirlsok.com.ar). Todos los derechos reservados.</p>
           <div className="flex items-center gap-2 text-pearl-400">
-            <span>Cosmética Botánica con</span>
-            <Heart className="w-3.5 h-3.5 text-rosegold-400 fill-current" />
-            <span>para una piel radiante</span>
+            <span>Cosmética Botánica · Capilar · Skincare con</span>
+            <Heart className="w-3.5 h-3.5 text-gold-400 fill-current" />
+            <span>para una piel y cabello radiante</span>
           </div>
         </div>
       </div>

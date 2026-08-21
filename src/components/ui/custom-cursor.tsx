@@ -78,7 +78,7 @@ export function CustomCursor() {
         }}
         className={`fixed top-0 left-0 rounded-full transition-all duration-150 pointer-events-none ${
           isHovered
-            ? "w-3 h-3 bg-rosegold-200 shadow-[0_0_15px_rgba(245,194,199,1)]"
+            ? "w-3 h-3 bg-gold-300 shadow-[0_0_15px_rgba(216,180,74,1)]"
             : "w-2.5 h-2.5 bg-pearl-100 shadow-[0_0_10px_rgba(255,255,255,0.9)]"
         }`}
       />
@@ -94,15 +94,15 @@ export function CustomCursor() {
         animate={{
           width: isHovered ? 64 : 36,
           height: isHovered ? 64 : 36,
-          borderColor: isHovered ? "rgba(245, 194, 199, 0.8)" : "rgba(255, 255, 255, 0.4)",
-          backgroundColor: isHovered ? "rgba(245, 194, 199, 0.12)" : "rgba(255, 255, 255, 0.03)",
-          boxShadow: isHovered ? "0 0 20px rgba(245, 194, 199, 0.3)" : "none",
+          borderColor: isHovered ? "rgba(229, 205, 117, 0.8)" : "rgba(255, 255, 255, 0.4)",
+          backgroundColor: isHovered ? "rgba(216, 180, 74, 0.12)" : "rgba(255, 255, 255, 0.03)",
+          boxShadow: isHovered ? "0 0 20px rgba(216, 180, 74, 0.35)" : "none",
         }}
         transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
         className="fixed top-0 left-0 rounded-full border border-solid backdrop-blur-[1px] flex items-center justify-center pointer-events-none"
       >
         {hoverText && (
-          <span className="text-[9px] uppercase tracking-widest text-rosegold-200 font-bold px-1 text-center truncate">
+          <span className="text-[9px] uppercase tracking-widest text-gold-200 font-bold px-1 text-center truncate">
             {hoverText}
           </span>
         )}

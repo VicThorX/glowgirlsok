@@ -43,21 +43,21 @@ export function Navbar() {
         >
           {/* Brand Logo & Emblem */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-9 h-9 rounded-full overflow-hidden border border-rosegold-300/30 p-1 bg-rosegold-400/10 group-hover:border-rosegold-300 transition-colors">
+            <div className="relative w-9 h-9 rounded-full overflow-hidden border border-gold-400/40 p-1 bg-gold-400/10 group-hover:border-gold-300 transition-colors shadow-glow-gold">
               <Image
                 src="/brand/logo.png"
-                alt="Glow Girls Logo"
+                alt="Glowgirlsok Logo"
                 fill
                 sizes="36px"
                 className="object-cover rounded-full"
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-lg sm:text-xl font-semibold tracking-wider text-white group-hover:text-rosegold-200 transition-colors">
-                Glow Girls
+              <span className="font-serif text-lg sm:text-xl font-semibold tracking-wider text-white group-hover:text-gold-200 transition-colors">
+                Glowgirlsok
               </span>
-              <span className="text-[10px] uppercase tracking-[0.25em] text-rosegold-300/80 -mt-1 font-medium">
-                Skin & Hair Care
+              <span className="text-[9.5px] uppercase tracking-[0.22em] text-gold-300/90 -mt-1 font-medium">
+                Botánica · Capilar · Skincare
               </span>
             </div>
           </Link>
@@ -80,15 +80,15 @@ export function Navbar() {
             {/* Status Live Indicator */}
             <div className="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-[11px] text-pearl-300">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-botanical-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-botanical-500" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-gold-500" />
               </span>
               <span className="tracking-wide">Stock Disponible</span>
             </div>
 
             {/* Magnetic Consultation CTA */}
             <a
-              href="https://wa.me/5491123923931?text=Hola%20Glow%20Girls!%20Deseo%20conocer%20la%20colecci%C3%B3n%20disponible"
+              href="https://wa.me/5491123923931?text=Hola%20Glowgirlsok!%20Deseo%20conocer%20la%20colecci%C3%B3n%20disponible"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-block"
@@ -119,7 +119,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-x-4 top-24 z-50 p-6 rounded-3xl bg-obsidian-900/95 border border-white/[0.12] shadow-2xl backdrop-blur-2xl lg:hidden flex flex-col gap-4 text-center"
+            className="fixed inset-x-4 top-24 z-50 p-6 rounded-3xl bg-obsidian-900/95 border border-gold-400/30 shadow-2xl backdrop-blur-2xl lg:hidden flex flex-col gap-4 text-center"
           >
             <div className="flex flex-col gap-2">
               {NAV_LINKS.map((link) => (
@@ -127,7 +127,7 @@ export function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="py-3 text-base font-medium text-pearl-200 hover:text-rosegold-300 border-b border-white/[0.05] transition-colors"
+                  className="py-3 text-base font-medium text-pearl-200 hover:text-gold-300 border-b border-white/[0.05] transition-colors"
                 >
                   {link.name}
                 </Link>
@@ -135,7 +135,7 @@ export function Navbar() {
             </div>
 
             <a
-              href="https://wa.me/5491123923931?text=Hola%20Glow%20Girls!%20Deseo%20asesoramiento%20personalizado"
+              href="https://wa.me/5491123923931?text=Hola%20Glowgirlsok!%20Deseo%20asesoramiento%20personalizado"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}

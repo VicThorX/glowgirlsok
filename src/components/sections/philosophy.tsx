@@ -65,9 +65,9 @@ export function Philosophy() {
       <div className="max-w-7xl mx-auto">
         {/* Top Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rosegold-400/10 border border-rosegold-300/20 text-rosegold-200 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
-            <Sparkles className="w-3 h-3 text-rosegold-300" />
-            Manifiesto Glow Girls
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-200 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+            <Sparkles className="w-3 h-3 text-gold-300" />
+            Manifiesto Glowgirlsok
           </div>
           <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl font-light text-white tracking-tight mb-6">
             La Alquimia entre Naturaleza & Ciencia
@@ -82,12 +82,12 @@ export function Philosophy() {
           {PILLARS.map((pillar, i) => {
             const Icon = pillar.icon;
             return (
-              <SpotlightCard key={i} className="flex flex-col justify-between p-8">
+              <SpotlightCard key={i} className="flex flex-col justify-between p-8 border border-gold-400/25 hover:border-gold-300/60">
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-rosegold-400/10 border border-rosegold-300/30 flex items-center justify-center text-rosegold-200 mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-2xl bg-gold-400/10 border border-gold-400/30 flex items-center justify-center text-gold-300 mb-6 group-hover:scale-110 transition-transform shadow-glow-gold">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="font-serif text-xl font-medium text-white mb-3">{pillar.title}</h3>
+                  <h3 className="font-serif text-xl font-medium text-white mb-3 group-hover:text-gold-200 transition-colors">{pillar.title}</h3>
                   <p className="text-pearl-300 text-sm leading-relaxed">{pillar.description}</p>
                 </div>
               </SpotlightCard>
@@ -96,14 +96,14 @@ export function Philosophy() {
         </div>
 
         {/* Ritual Section */}
-        <div id="rituales" className="relative rounded-3xl border border-white/[0.08] bg-obsidian-850/50 p-8 sm:p-12 md:p-16 backdrop-blur-xl overflow-hidden">
+        <div id="rituales" className="relative rounded-3xl border border-gold-400/30 bg-gradient-to-b from-obsidian-850/70 to-obsidian-900/90 p-8 sm:p-12 md:p-16 backdrop-blur-xl overflow-hidden shadow-glow-gold-card">
           {/* Subtle Ambient Halo in Card */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-rosegold-300/10 blur-[100px] pointer-events-none" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gold-400/10 blur-[100px] pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Header Info */}
             <div className="lg:col-span-4 flex flex-col items-start">
-              <span className="text-xs uppercase tracking-[0.25em] text-rosegold-300 font-semibold mb-2">
+              <span className="text-xs uppercase tracking-[0.25em] text-gold-300 font-semibold mb-2">
                 Guía de Aplicación
               </span>
               <h3 className="font-serif text-3xl sm:text-4xl text-white font-medium tracking-tight mb-4">
@@ -114,7 +114,7 @@ export function Philosophy() {
               </p>
 
               <a
-                href="https://wa.me/5491123923931?text=Hola%20Glow%20Girls!%20Quiero%20asesoramiento%20para%20crear%20mi%20rutina%20personalizada"
+                href="https://wa.me/5491123923931?text=Hola%20Glowgirlsok!%20Quiero%20asesoramiento%20para%20crear%20mi%20rutina%20personalizada"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -130,20 +130,20 @@ export function Philosophy() {
               {RITUAL_STEPS.map((item, idx) => (
                 <div
                   key={idx}
-                  className="p-6 rounded-2xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.06] hover:border-rosegold-300/30 transition-all duration-300 group"
+                  className="p-6 rounded-2xl bg-white/[0.02] hover:bg-gold-400/5 border border-gold-400/15 hover:border-gold-300/45 transition-all duration-300 group"
                 >
                   <div className="flex items-center justify-between mb-3">
-                    <span className="font-mono text-2xl font-light text-rosegold-300/60 group-hover:text-rosegold-200 transition-colors">
+                    <span className="font-mono text-2xl font-light text-gold-300/70 group-hover:text-gold-200 transition-colors">
                       {item.step}
                     </span>
-                    <span className="text-[10px] uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-white/[0.04] text-pearl-300 border border-white/[0.08]">
+                    <span className="text-[10px] uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-gold-400/10 text-gold-200 border border-gold-400/25">
                       {item.badge}
                     </span>
                   </div>
-                  <span className="text-xs uppercase tracking-widest text-rosegold-300/80 font-medium block mb-1">
+                  <span className="text-xs uppercase tracking-widest text-gold-300/90 font-medium block mb-1">
                     {item.phase}
                   </span>
-                  <h4 className="font-serif text-lg font-medium text-white mb-2">{item.name}</h4>
+                  <h4 className="font-serif text-lg font-medium text-white group-hover:text-gold-100 transition-colors mb-2">{item.name}</h4>
                   <p className="text-xs text-pearl-400 leading-relaxed">{item.description}</p>
                 </div>
               ))}

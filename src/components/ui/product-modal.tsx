@@ -33,7 +33,7 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
   if (!product) return null;
 
   const whatsappMessage = encodeURIComponent(
-    `¡Hola Glow Girls! ✨ Me encantó el producto *${product.name}* (${product.volume}) y quiero consultar disponibilidad o realizar mi pedido.`
+    `¡Hola Glowgirlsok! ✨ Me encantó el producto *${product.name}* (${product.volume}) y quiero consultar disponibilidad o realizar mi pedido.`
   );
 
   return (
@@ -46,7 +46,7 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
           onClick={onClose}
-          className="fixed inset-0 bg-obsidian-950/80 backdrop-blur-xl"
+          className="fixed inset-0 bg-obsidian-950/85 backdrop-blur-xl"
         />
 
         {/* Modal Window */}
@@ -55,7 +55,7 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="relative z-10 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl border border-white/[0.12] bg-obsidian-900/90 shadow-2xl backdrop-blur-2xl text-white p-6 sm:p-8 md:p-10"
+          className="relative z-10 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl border border-gold-400/35 bg-obsidian-900/95 shadow-2xl backdrop-blur-2xl text-white p-6 sm:p-8 md:p-10"
         >
           {/* Close Button */}
           <button
@@ -69,7 +69,7 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Product Image Showcase */}
             <div className="md:col-span-5 relative flex items-center justify-center">
-              <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border border-white/[0.08] bg-obsidian-850/80 p-4 group">
+              <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border border-gold-400/20 bg-obsidian-850/90 p-4 group">
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -80,8 +80,8 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian-950/60 via-transparent to-transparent pointer-events-none" />
                 {product.badge && (
-                  <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-rosegold-400/20 text-rosegold-200 border border-rosegold-300/30 backdrop-blur-md">
-                    <Sparkles className="w-3 h-3 text-rosegold-300" />
+                  <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-gold-500/15 text-gold-200 border border-gold-400/30 backdrop-blur-md">
+                    <Sparkles className="w-3 h-3 text-gold-300" />
                     {product.badge}
                   </span>
                 )}
@@ -91,8 +91,8 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
             {/* Product Info */}
             <div className="md:col-span-7 flex flex-col justify-between">
               <div>
-                <div className="flex items-center gap-2 mb-2 text-xs uppercase tracking-widest text-rosegold-300 font-medium">
-                  <span>{product.category === "skincare" ? "Skincare Botánico" : "Hair Care Profesional"}</span>
+                <div className="flex items-center gap-2 mb-2 text-xs uppercase tracking-widest text-gold-300 font-medium">
+                  <span>{product.category === "skincare" ? "Cosmética Botánica · Skincare" : "Hair Care Profesional"}</span>
                   <span>•</span>
                   <span>{product.volume}</span>
                 </div>
@@ -100,21 +100,21 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
                 <h2 className="font-serif text-3xl sm:text-4xl text-white font-medium tracking-tight mb-2">
                   {product.name}
                 </h2>
-                <p className="text-rosegold-200/90 text-sm font-medium mb-4">{product.subtitle}</p>
+                <p className="text-gold-200/90 text-sm font-medium mb-4">{product.subtitle}</p>
 
                 <p className="text-pearl-300 text-sm leading-relaxed mb-6">{product.description}</p>
 
                 {/* Active Ingredients Tag Cloud */}
                 <div className="mb-6">
-                  <h4 className="text-xs uppercase tracking-wider text-pearl-400 font-semibold mb-2 flex items-center gap-1.5">
-                    <Droplets className="w-3.5 h-3.5 text-rosegold-300" />
+                  <h4 className="text-xs uppercase tracking-wider text-gold-300 font-semibold mb-2 flex items-center gap-1.5">
+                    <Droplets className="w-3.5 h-3.5 text-gold-300" />
                     Principios Activos Clave
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {product.activeIngredients.map((ing, i) => (
                       <span
                         key={i}
-                        className="px-3 py-1 rounded-full text-xs bg-white/[0.04] border border-white/[0.08] text-pearl-200"
+                        className="px-3 py-1 rounded-full text-xs bg-gold-400/5 border border-gold-400/20 text-pearl-200"
                       >
                         {ing}
                       </span>
@@ -131,7 +131,7 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
                   <ul className="space-y-1.5 text-xs text-pearl-300">
                     {product.benefits.map((b, i) => (
                       <li key={i} className="flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-rosegold-300" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-gold-300" />
                         <span>{b}</span>
                       </li>
                     ))}
@@ -139,9 +139,9 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
                 </div>
 
                 {/* Usage instruction */}
-                <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.06] mb-6">
+                <div className="p-3.5 rounded-xl bg-white/[0.02] border border-gold-400/15 mb-6">
                   <p className="text-xs text-pearl-400">
-                    <strong className="text-rosegold-300 font-medium">Modo de aplicación:</strong> {product.usage}
+                    <strong className="text-gold-300 font-medium">Modo de aplicación:</strong> {product.usage}
                   </p>
                 </div>
               </div>
@@ -150,7 +150,7 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-4 border-t border-white/[0.08]">
                 <div>
                   <span className="text-xs text-pearl-400 block uppercase tracking-wider">Precio Exclusivo</span>
-                  <span className="font-serif text-2xl sm:text-3xl font-semibold text-white">
+                  <span className="font-serif text-2xl sm:text-3xl font-semibold text-gold-300">
                     {formatPrice(product.price)}
                   </span>
                 </div>

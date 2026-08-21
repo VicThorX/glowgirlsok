@@ -3,27 +3,27 @@
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
-// Curated Luxury Color Harmonies for Glow Girls
+// Curated Luxury Color Harmonies for Glowgirlsok (Dark & Gold)
 export const GLOW_PALETTES = [
+  {
+    name: "Pure Gold & Champagne",
+    tubes: ["#E5CD75", "#D8B44A", "#F7F0D4"],
+    lights: ["#D4AF37", "#F7F0D4", "#C89A25", "#FAF6EE"],
+  },
   {
     name: "Rose Gold & Pearl",
     tubes: ["#F4D0D6", "#FFB4A2", "#E8D5C4"],
     lights: ["#FFB4A2", "#FDF0D5", "#D9727E", "#E8D5C4"],
   },
   {
-    name: "Champagne & Amber",
-    tubes: ["#E8D5C4", "#CBA978", "#FAF6EE"],
-    lights: ["#D4AF37", "#F4EBD8", "#FFB4A2", "#E8D5C4"],
+    name: "Botanical & Gold",
+    tubes: ["#E5CD75", "#34D399", "#FAF6EE"],
+    lights: ["#10B981", "#E5CD75", "#059669", "#FDF0D5"],
   },
   {
-    name: "Botanical Essence",
-    tubes: ["#F4D0D6", "#34D399", "#E8D5C4"],
-    lights: ["#10B981", "#FFB4A2", "#059669", "#FDF0D5"],
-  },
-  {
-    name: "Rose Quartz",
-    tubes: ["#F9D7DB", "#B5838D", "#F4D0D6"],
-    lights: ["#E5989B", "#F5C2C7", "#6D3843", "#FAF6EE"],
+    name: "Imperial Obsidian",
+    tubes: ["#D8B44A", "#B5838D", "#F7F0D4"],
+    lights: ["#E5CD75", "#F5C2C7", "#825A12", "#FAF6EE"],
   },
 ];
 
