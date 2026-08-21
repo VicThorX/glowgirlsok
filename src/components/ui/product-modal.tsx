@@ -61,13 +61,13 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="relative z-10 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl border border-gold-400/35 bg-obsidian-900/95 shadow-2xl backdrop-blur-2xl text-white p-6 sm:p-8 md:p-10"
         >
-          {/* Close Button */}
+          {/* High-Contrast Luxury Close Button */}
           <button
             onClick={onClose}
-            className="absolute top-6 right-6 p-2.5 rounded-full bg-white/[0.05] hover:bg-white/[0.12] border border-white/10 text-pearl-300 hover:text-white transition-all cursor-pointer z-20"
-            aria-label="Cerrar modal"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-11 h-11 rounded-full bg-obsidian-950/95 hover:bg-gold-400/20 border border-gold-400/60 hover:border-gold-300 text-gold-300 hover:text-white shadow-[0_4px_20px_rgba(0,0,0,0.9),0_0_12px_rgba(216,180,74,0.25)] backdrop-blur-xl flex items-center justify-center transition-all duration-300 cursor-pointer z-30 group"
+            aria-label="Cerrar detalle de producto"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
           </button>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
@@ -186,7 +186,13 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2.5 w-full sm:w-auto">
+                  <button
+                    onClick={onClose}
+                    className="sm:hidden px-4 py-3 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 text-xs font-medium text-pearl-300 hover:text-white transition-colors cursor-pointer"
+                  >
+                    Volver
+                  </button>
                   <a
                     href={`https://wa.me/5491123923931?text=${whatsappMessage}`}
                     target="_blank"
