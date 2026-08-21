@@ -21,7 +21,7 @@ export function SplitText({
   delay = 0.2,
   staggerDelay = 0.04,
   highlightWords = [],
-  highlightClassName = "italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-gold-200 via-gold-300 to-amber-400 pr-[0.12em] inline-block",
+  highlightClassName = "italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-gold-200 via-gold-300 to-amber-400 pl-[0.06em] pr-[0.25em] inline-block",
 }: SplitTextProps) {
   const words = children.split(" ");
 
@@ -68,14 +68,25 @@ export function SplitText({
         const isHighlighted = highlightWords.some(
           (hw) => hw.toLowerCase() === cleanWord.toLowerCase()
         );
+        const isFirst = i === 0;
+        const isLast = i === words.length - 1;
 
         return (
-          <span key={i} className="inline-block overflow-visible mr-[0.28em] last:mr-0 align-baseline py-1 -my-1">
+          <span
+            key={i}
+            className={cn(
+              "inline-block overflow-visible mr-[0.3em] last:mr-0 align-baseline py-1.5 -my-1.5",
+              isFirst && "pl-[0.1em]",
+              isLast && "pr-[0.25em]"
+            )}
+          >
             <motion.span
               variants={wordVariants}
               className={cn(
-                "inline-block gpu-layer overflow-visible leading-[1.25] pb-1",
-                isHighlighted ? highlightClassName : "text-white"
+                "inline-block gpu-layer overflow-visible leading-[1.28] pb-1",
+                isHighlighted
+                  ? highlightClassName
+                  : "text-white px-[0.04em]"
               )}
             >
               {word}

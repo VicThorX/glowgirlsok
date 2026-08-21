@@ -33,7 +33,11 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
   if (!product) return null;
 
   const whatsappMessage = encodeURIComponent(
-    `¡Hola Glowgirlsok! ✨ Me encantó el producto *${product.name}* (${product.volume}) y quiero consultar disponibilidad o realizar mi pedido.`
+    product.isKit
+      ? `¡Hola Glowgirlsok! ✨ Deseo adquirir el paquete completo *${product.name}* (${formatPrice(
+          product.price
+        )}) que incluye los 5 pasos (Jabón Líquido, Tónico de Rosas, Vitamina C, Ácido Hialurónico y Crema Facial). ¿Podrían coordinar mi pedido y despacho?`
+      : `¡Hola Glowgirlsok! ✨ Me encantó el producto *${product.name}* (${product.volume}) y quiero consultar disponibilidad o realizar mi pedido.`
   );
 
   return (
@@ -104,6 +108,24 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
 
                 <p className="text-pearl-300 text-sm leading-relaxed mb-6">{product.description}</p>
 
+                {/* Kit Breakdown List if product is a bundle */}
+                {product.isKit && product.kitProducts && (
+                  <div className="p-4 rounded-2xl bg-gold-400/10 border border-gold-400/30 mb-6">
+                    <h4 className="text-xs uppercase tracking-wider text-gold-200 font-semibold mb-3 flex items-center gap-1.5">
+                      <Sparkles className="w-3.5 h-3.5 text-gold-300" />
+                      Productos Incluidos en el Kit (5 Pasos)
+                    </h4>
+                    <div className="space-y-2 text-xs text-pearl-200">
+                      {product.kitProducts.map((item, idx) => (
+                        <div key={idx} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-gold-300 shrink-0 mt-0.5" />
+                          <span className="leading-snug">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Active Ingredients Tag Cloud */}
                 <div className="mb-6">
                   <h4 className="text-xs uppercase tracking-wider text-gold-300 font-semibold mb-2 flex items-center gap-1.5">
@@ -149,10 +171,19 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
               {/* Price & CTA Actions */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-4 border-t border-white/[0.08]">
                 <div>
-                  <span className="text-xs text-pearl-400 block uppercase tracking-wider">Precio Exclusivo</span>
-                  <span className="font-serif text-2xl sm:text-3xl font-semibold text-gold-300">
-                    {formatPrice(product.price)}
+                  <span className="text-xs text-pearl-400 block uppercase tracking-wider">
+                    {product.isKit ? "Precio Promocional del Set" : "Precio Exclusivo"}
                   </span>
+                  <div className="flex items-baseline gap-2">
+                    <span className="font-serif text-2xl sm:text-3xl font-semibold text-gold-300">
+                      {formatPrice(product.price)}
+                    </span>
+                    {product.originalPrice && (
+                      <span className="text-sm text-pearl-500 line-through">
+                        {formatPrice(product.originalPrice)}
+                      </span>
+                    )}
+                  </div>
                 </div>
 
                 <div className="flex items-center gap-3">
@@ -162,9 +193,9 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
                     rel="noopener noreferrer"
                     className="flex-1 sm:flex-none"
                   >
-                    <MagneticButton variant="primary" className="w-full text-xs uppercase tracking-wider py-3 px-6">
+                    <MagneticButton variant="primary" className="w-full text-xs uppercase tracking-wider py-3 px-6 whitespace-nowrap">
                       <MessageCircle className="w-4 h-4 fill-current" />
-                      Pedir por WhatsApp
+                      <span>{product.isKit ? "Comprar Paquete Completo" : "Pedir por WhatsApp"}</span>
                     </MagneticButton>
                   </a>
                 </div>

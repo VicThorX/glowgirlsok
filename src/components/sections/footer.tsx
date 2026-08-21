@@ -100,10 +100,15 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Quick Links: Skincare */}
+          {/* Quick Links: Skincare & Kits */}
           <div className="md:col-span-2">
-            <h4 className="font-serif text-white text-base font-medium mb-4">Skincare</h4>
+            <h4 className="font-serif text-white text-base font-medium mb-4">Skincare & Kits</h4>
             <ul className="space-y-2.5 text-xs text-pearl-400">
+              <li>
+                <a href="#colecciones" className="text-gold-300 font-medium hover:underline transition-colors">
+                  ✦ Rutina Completa (5 Pasos)
+                </a>
+              </li>
               <li>
                 <a href="#colecciones" className="hover:text-gold-300 transition-colors">
                   Tónico de Rosas
@@ -132,10 +137,15 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Quick Links: Hair Care */}
+          {/* Quick Links: Hair Care & Cursos */}
           <div className="md:col-span-2">
-            <h4 className="font-serif text-white text-base font-medium mb-4">Hair Care</h4>
+            <h4 className="font-serif text-white text-base font-medium mb-4">Hair Care & Cursos</h4>
             <ul className="space-y-2.5 text-xs text-pearl-400">
+              <li>
+                <a href="#cursos" className="text-gold-300 font-medium hover:underline transition-colors">
+                  ✦ Capacitación Virtual
+                </a>
+              </li>
               <li>
                 <a href="#colecciones" className="hover:text-gold-300 transition-colors">
                   Matizador Violeta

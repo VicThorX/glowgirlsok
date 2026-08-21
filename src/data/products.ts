@@ -10,16 +10,61 @@ export interface Product {
   bannerImage?: string;
   volume: string;
   price: number;
+  originalPrice?: number;
   highlightKey: string;
   activeIngredients: string[];
   benefits: string[];
   usage: string;
   skinHairType: string;
+  isKit?: boolean;
+  kitProducts?: string[];
   featuredInBento?: boolean;
   bentoSpan?: "col-span-12 md:col-span-8" | "col-span-12 md:col-span-4" | "col-span-12 md:col-span-6";
 }
 
 export const PRODUCTS: Product[] = [
+  {
+    id: "rutina-skincare-completa",
+    name: "Rutina de Skincare Completa",
+    subtitle: "Kit Integral de 5 Pasos: Limpieza, Tonificación, Tratamiento & Nutrición",
+    category: "skincare",
+    badge: "Kit Completo · 5 Pasos",
+    tagline: "El set integral con los 5 pasos esenciales para una transformación dérmica total",
+    description:
+      "La rutina botánica definitiva que reúne los 5 pilares imprescindibles para el cuidado facial: 1. Jabón Líquido Limpiador Suave, 2. Tónico de Rosas Hidrolato Puro, 3. Sérum Vitamina C al 10%, 4. Sérum Ácido Hialurónico Multicapa y 5. Crema Facial Aloe Vera Pura. Adquiere el tratamiento completo en 1 solo paso con beneficio exclusivo.",
+    image: "/products/rutina-skincare-completa.jpg",
+    bannerImage: "/products/rutina-skincare-completa.jpg",
+    volume: "Set Integral (5 Productos)",
+    price: 89900,
+    originalPrice: 108800,
+    highlightKey: "Jabón + Tónico + Vit C + Hialurónico + Crema",
+    isKit: true,
+    kitProducts: [
+      "1. Jabón Líquido / Gel Limpiador Facial Suave (150 ml) — Limpieza profunda sin alterar la barrera cutánea.",
+      "2. Tónico de Rosas Hidrolato Puro (100 ml) — Equilibra el pH y aporta frescura botánica inmediata.",
+      "3. Sérum Vitamina C 10% Despigmentante (35 ml) — Potente acción antioxidante y unificación del tono.",
+      "4. Sérum Ácido Hialurónico Multicapa (35 ml) — Hidratación profunda con efecto plump y relleno.",
+      "5. Crema Facial Aloe Vera Pura (100 ml) — Nutrición celular, calma dérmica y sellado hidratante 24h.",
+    ],
+    activeIngredients: [
+      "Hidrolato de Rosas Damascena Puro",
+      "Ácido L-Ascórbico 10%",
+      "Ácido Hialurónico Macro & Micro",
+      "Aloe Vera Barbadensis 100% Orgánico",
+      "Tensioactivos Vegetales Suaves",
+    ],
+    benefits: [
+      "Rutina diaria completa lista para usar mañana y noche",
+      "Adquisición del paquete integral completo en 1 solo paso",
+      "Ahorro exclusivo del 17% frente a la compra individual",
+      "Fórmulas botánicas 100% puras libres de sulfatos y parabenos",
+      "Envío prioritario express incluido a todo el país",
+    ],
+    usage: "Paso 1: Limpiar con Jabón Líquido > Paso 2: Bruma con Tónico de Rosas > Paso 3: Sérum Ácido Hialurónico (día) o Vitamina C (noche) > Paso 4: Sellar con Crema Facial.",
+    skinHairType: "Todo tipo de piel, ideal para quienes buscan una rutina profesional completa y simplificada.",
+    featuredInBento: true,
+    bentoSpan: "col-span-12 md:col-span-8",
+  },
   {
     id: "tonico-rosas",
     name: "Tónico de Rosas",
@@ -44,7 +89,7 @@ export const PRODUCTS: Product[] = [
     usage: "Vaporizar a 15 cm del rostro limpio por la mañana y noche, o a lo largo del día para refrescar.",
     skinHairType: "Todo tipo de piel, ideal para pieles sensibles y deshidratadas",
     featuredInBento: true,
-    bentoSpan: "col-span-12 md:col-span-8",
+    bentoSpan: "col-span-12 md:col-span-4",
   },
   {
     id: "niacinamida-pantenol",

@@ -9,8 +9,7 @@ import { MagneticButton } from "@/components/ui/magnetic-button";
 
 const NAV_LINKS = [
   { name: "Colecciones", href: "#colecciones" },
-  { name: "Skincare Facial", href: "#skincare" },
-  { name: "Hair Care", href: "#haircare" },
+  { name: "Cursos Virtuales", href: "#cursos" },
   { name: "Filosofía Botánica", href: "#filosofia" },
   { name: "Ritual Glow", href: "#rituales" },
 ];

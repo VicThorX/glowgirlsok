@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/hero";
 import { MarqueeStrip } from "@/components/sections/marquee-strip";
 import { BentoGrid } from "@/components/sections/bento-grid";
 import { Philosophy } from "@/components/sections/philosophy";
+import { CoursesSection } from "@/components/sections/courses-section";
 import { InstagramFeed } from "@/components/sections/instagram-feed";
 import { Footer } from "@/components/sections/footer";
 
@@ -23,6 +24,9 @@ export default function Home() {
 
       {/* Botanical Alchemy & Ritual Section */}
       <Philosophy />
+
+      {/* Virtual Courses & Professional Masterclass */}
+      <CoursesSection />
 
       {/* Community & Instagram Results Gallery */}
       <InstagramFeed />
