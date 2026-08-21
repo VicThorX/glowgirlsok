@@ -1,8 +1,14 @@
-export interface CourseModule {
+export interface FormulaGroup {
+  subtitle?: string;
+  items: string[];
+}
+
+export interface FormulaCategory {
+  id: string;
   number: string;
   title: string;
-  duration: string;
-  topics: string[];
+  summary: string;
+  groups: FormulaGroup[];
 }
 
 export interface Course {
@@ -17,100 +23,221 @@ export interface Course {
   originalPrice?: number;
   format: string;
   duration: string;
-  keyBenefit: string;
+  keyBenefitTitle: string;
+  keyBenefitDescription: string;
   benefits: string[];
-  modules: CourseModule[];
+  categories: FormulaCategory[];
   includes: string[];
-  targetAudience: string;
   whatsappMessage: string;
 }
 
 export const COURSES: Course[] = [
   {
-    id: "capacitacion-cosmetica-botanica",
-    title: "Capacitación Virtual en Cosmética Botánica & Skincare Profesional",
-    subtitle: "Aprende el arte y la ciencia de formular, diagnosticar y cuidar la piel",
-    badge: "Certificación Oficial",
-    tagline: "De principiante a formuladora botánica con acompañamiento personalizado",
+    id: "curso-elaboracion-cosmetica-capilar",
+    title: "Curso Completo de Elaboración de Cosmética Capilar",
+    subtitle: "Aprende a formular y fabricar tu propia línea de productos capilares profesionales desde cero.",
+    badge: "Guías en PDF + Mentoría 1 a 1",
+    tagline: "Formación 100% online, flexible y práctica con fórmulas probadas y acompañamiento individual",
     description:
-      "Una formación 100% online y práctica diseñada para brindarte los conocimientos científicos y botánicos necesarios para comprender la salud dérmica, formular productos botánicos de alta gama y diseñar rutinas personalizadas efectivas.",
+      "Formación 100% online y flexible diseñada para que aprendas a formular y fabricar tu propia línea de productos capilares profesionales desde cero. Incluye guías descargables con fórmulas completas, proporciones exactas y asesoría personalizada directa.",
     image: "/courses/capacitacion-virtual-banner.jpg",
     price: 48500,
     originalPrice: 65000,
-    format: "Online a tu propio ritmo · Acceso 24/7",
-    duration: "6 Semanas estimadas (Acceso de por vida)",
-    keyBenefit: "Acompañamiento Gratuito y Mentoría 1-a-1 Directa",
+    format: "100% Online · A tu propio ritmo",
+    duration: "Acceso Permanente sin límite de tiempo",
+    keyBenefitTitle: "Asesoría y Mentoría 1 a 1 por WhatsApp",
+    keyBenefitDescription: "Acompañamiento personalizado e individual para resolver cualquier duda durante tu proceso de elaboración.",
     benefits: [
-      "Acompañamiento gratuito y seguimiento 1-a-1 por WhatsApp para resolver dudas",
-      "Acceso ilimitado y de por vida a todas las clases grabadas y futuras actualizaciones",
-      "Material didáctico en PDF, recetarios exclusivos y fichas de diagnóstico",
-      "Certificado digital de finalización avalado por Glowgirlsok",
-      "Acceso a la comunidad privada de alumnas y red de apoyo",
+      "Material didáctico descargable completo en PDF con fórmulas, proporciones y procedimientos paso a paso.",
+      "Asesoría y acompañamiento individual continuo vía WhatsApp.",
+      "Acceso permanente y sin límite de tiempo (estudio 100% a tu propio ritmo, sin horarios fijos).",
+      "Soporte directo para formulación y consultas técnicas.",
     ],
-    modules: [
+    categories: [
       {
+        id: "shampoos-acondicionadores",
         number: "01",
-        title: "Fundamentos de la Cosmética Botánica & Dermoestética",
-        duration: "Módulo 1",
-        topics: [
-          "Anatomía y fisiología cutánea: la barrera hidrolipídica",
-          "Hidrolatos puros, aguas florales y extractos vírgenes",
-          "Identificación de tipos y estados de piel",
-          "Filosofía clean: cosmética sin sulfatos ni tóxicos",
+        title: "Shampoos y Acondicionadores",
+        summary: "Fórmulas equilibradas para limpieza y acondicionamiento profesional según necesidad.",
+        groups: [
+          {
+            subtitle: "Línea Shampoos",
+            items: [
+              "Shampoo Base Profesional",
+              "Shampoo Neutro de Limpieza Suave",
+              "Shampoo Ácido Post-Color",
+              "Shampoo Post-Tratamientos",
+              "Shampoo Anticaída Fortalecedor",
+              "Shampoo Estimulante del Crecimiento Capilar",
+            ],
+          },
+          {
+            subtitle: "Línea Acondicionadores",
+            items: [
+              "Acondicionador para Todo Tipo de Cabello",
+              "Acondicionador Ácido / Post-Color",
+              "Acondicionador Multivitamínico Nutritivo",
+              "Acondicionador Post-Tratamientos",
+              "Acondicionador Anticaída",
+              "Acondicionador Anti-Frizz Suavizante",
+            ],
+          },
         ],
       },
       {
+        id: "mascaras-tratamientos",
         number: "02",
-        title: "Principios Activos Puros & Biotecnología Celular",
-        duration: "Módulo 2",
-        topics: [
-          "Ácido Hialurónico: pesos moleculares y absorción",
-          "Niacinamida (B3) y Provitamina B5: reparación dérmica",
-          "Vitamina C: estabilidad, antioxidantes y despigmentación",
-          "Conservantes naturales certificados y antioxidantes vegetales",
+        title: "Máscaras y Tratamientos Nutritivos",
+        summary: "Tratamientos intensivos, nutrición profunda y sellado cuticular.",
+        groups: [
+          {
+            subtitle: "Baños de Crema & Nutrición",
+            items: [
+              "Baños de Crema y Nutrición Capilar Específica según tipo de cabello",
+              "Tratamientos Reparadores Intensivos",
+              "Crema Ácida Selladora de Cutículas",
+            ],
+          },
+          {
+            subtitle: "Máscaras Activas Botánicas",
+            items: [
+              "Máscara Activa de Argán (Brillo y Sedosidad)",
+              "Máscara Activa de Lino (Nutrición y Elasticidad)",
+              "Máscara Activa de Almendras (Suavidad y Flexibilidad)",
+              "Máscara Activa de Ricino (Fuerza y Crecimiento)",
+              "Máscara Activa de Coco (Hidratación Profunda)",
+              "Máscara Bomba Multivitamínica (Shock Revitalizante)",
+            ],
+          },
         ],
       },
       {
+        id: "finalizadores-brillo-termicos",
         number: "03",
-        title: "Formulación y Elaboración Práctica Paso a Paso",
-        duration: "Módulo 3",
-        topics: [
-          "Elaboración de tónicos botánicos y brumas faciales",
-          "Sérums concentrados acuosos y emulsiones ligeras",
-          "Cremas hidratantes y nutritivas: texturas sedosas",
-          "Medición y calibración de pH, higiene y esterilización",
+        title: "Finalizadores, Brillo y Protección Térmica",
+        summary: "Productos de peinado, control del encrespamiento, luminosidad y protección contra el calor.",
+        groups: [
+          {
+            subtitle: "Peinado & Anti-Frizz",
+            items: [
+              "Crema para Peinar Modeladora",
+              "Loción Desenredante Ultraligera",
+              "Spray Anti-Frizz Disciplinante",
+              "Acondicionador Bifásico Express",
+            ],
+          },
+          {
+            subtitle: "Brillo & Protección",
+            items: [
+              "Oro Líquido Elixir Capilar",
+              "Sérum Reparador de Puntas Selladas",
+              "Protector Térmico Anti-Planchita & Secador",
+              "Spray de Brillo Capilar Espejo",
+            ],
+          },
         ],
       },
       {
+        id: "alisados-control-frizz",
         number: "04",
-        title: "Diagnóstico Cutáneo & Diseño de Rutinas a Medida",
-        duration: "Módulo 4",
-        topics: [
-          "Ficha técnica de evaluación facial profesional",
-          "Creación de rituales diurnos, nocturnos y de rescate",
-          "Tratamiento botánico para rosácea, acné y envejecimiento",
-          "Pautas de bioseguridad y test de alergia previo",
+        title: "Alisados y Control del Frizz",
+        summary: "Líneas de alisado progresivo, laminado y reducción de volumen en múltiples formatos.",
+        groups: [
+          {
+            subtitle: "Línea Anti-Frizz & Cauterización",
+            items: [
+              "Desvoluminizador Capilar",
+              "Cauterizador Molecular",
+              "Laminado Capilar",
+              "Encerado Térmico",
+            ],
+          },
+          {
+            subtitle: "Línea Alisados Profesionales",
+            items: [
+              "Alisado Plastificado",
+              "Alisado Coco y Argán",
+              "Alisado Biomolecular",
+              "Alisado Efecto Espejo",
+              "Alisado Japonés",
+              "Alisado Multivitamínico",
+              "Bioplastificado Capilar",
+              "Alisado Keratínico",
+              "Alisado Brillo 3D",
+              "Alisado Mota",
+            ],
+          },
+          {
+            subtitle: "Formatos de Elaboración",
+            items: [
+              "Formato Líquido / Spray",
+              "Formato Gel de Alta Adherencia",
+              "Formato Crema Tradicional",
+            ],
+          },
         ],
       },
       {
+        id: "shocks-botox-matizadores",
         number: "05",
-        title: "Emprendimiento, Packaging & Comercialización",
-        duration: "Módulo 5",
-        topics: [
-          "Costos de producción, márgenes y fijación de precios",
-          "Packaging sustentable, envases y preservación",
-          "Creación de marca y fotografía de producto",
-          "Estrategias de venta en redes sociales y WhatsApp",
+        title: "Shocks, Botox y Matizadores",
+        summary: "Tratamientos de relleno capilar, botox regenerativo y neutralización de tonos indeseados.",
+        groups: [
+          {
+            subtitle: "Shocks & Botox Capilar",
+            items: [
+              "Botox con Ácido Hialurónico Plump",
+              "Shock de Botox Restaurador",
+              "Shock de Keratina Líquida",
+              "Lifting Capilar Antiedad",
+            ],
+          },
+          {
+            subtitle: "Línea Matizadores para Rubios & Canas",
+            items: [
+              "Matizador Violeta (Anti-Amarillo)",
+              "Matizador Black (Grisáceos / Platinados)",
+              "Matizador Azul (Anti-Cobrizo / Naranja)",
+              "Shampoo Matizador Concentrado",
+              "Máscara Matizadora Nutritiva",
+              "Botox Matizador Restaurador",
+            ],
+          },
+        ],
+      },
+      {
+        id: "barberia-fijacion",
+        number: "06",
+        title: "Línea Barbería y Fijación",
+        summary: "Formulaciones masculinas para cuidado de barba, afeitado y modelado de alta fijación.",
+        groups: [
+          {
+            subtitle: "Cuidado de Barba & Afeitado",
+            items: [
+              "Shampoo Específico para Barba",
+              "Sérum Nutritivo y Acondicionador de Barba",
+              "Espuma / Gel de Afeitar Suave",
+              "Cera para Bigote y Modelado Fino",
+            ],
+          },
+          {
+            subtitle: "Geles & Ceras Modeladoras",
+            items: [
+              "Ceras Modeladoras Mate y Brillo",
+              "Gel Fijador Base Suave",
+              "Gel Fijador Fuerte Larga Duración",
+              "Gel Fijador Efecto Húmedo (Wet Look)",
+            ],
+          },
         ],
       },
     ],
     includes: [
-      "Clases en video HD paso a paso",
-      "E-books y recetario descargable en PDF",
-      "Soporte directo para consultas",
-      "Certificado oficial de asistencia",
+      "Guías completas en PDF descargables",
+      "Fórmulas y proporciones exactas",
+      "Mentoría 1 a 1 por WhatsApp",
+      "Acceso permanente de por vida",
     ],
-    targetAudience: "Emprendedoras, cosmetólogas, terapeutas holísticas y amantes del cuidado de la piel que buscan profesionalizarse.",
-    whatsappMessage: "¡Hola Glowgirlsok! Deseo solicitar información e inscribirme en la Capacitación Virtual con Acompañamiento Gratuito.",
+    whatsappMessage: "¡Hola Glowgirlsok! ✨ Deseo solicitar información e inscribirme en el *Curso Completo de Elaboración de Cosmética Capilar* (Guías en PDF + Mentoría 1 a 1 por WhatsApp).",
   },
 ];
