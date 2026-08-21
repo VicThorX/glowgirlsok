@@ -54,19 +54,19 @@ const COMMUNITY_POSTS = [
 
 export function InstagramFeed() {
   return (
-    <section className="relative py-24 sm:py-32 px-4 sm:px-6 md:px-12 border-t border-white/[0.06] overflow-hidden">
+    <section className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-12 border-t border-gold-400/15 overflow-hidden">
       {/* Background glow accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-rosegold-300/5 blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gold-400/5 blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-16 gap-6">
           <div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-200 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
               <Sparkles className="w-3 h-3 text-gold-300" />
               Comunidad Glowgirlsok
             </div>
-            <h2 className="font-serif text-3xl sm:text-5xl font-light text-white tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-white tracking-tight">
               Resultados Reales en Piel & Cabello
             </h2>
           </div>

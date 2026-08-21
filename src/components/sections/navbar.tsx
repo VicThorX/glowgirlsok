@@ -63,12 +63,12 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/[0.02] border border-white/[0.05]">
+          <div className="hidden lg:flex items-center gap-1 xl:gap-1.5 px-3 xl:px-4 py-1.5 rounded-full bg-white/[0.02] border border-white/[0.05]">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="relative px-3.5 py-1.5 text-xs font-medium tracking-wider text-pearl-300 hover:text-white rounded-full transition-all duration-300 hover:bg-white/[0.06]"
+                className="relative px-2.5 xl:px-3.5 py-1 text-[11px] xl:text-xs font-medium tracking-wider text-pearl-300 hover:text-white rounded-full transition-all duration-300 hover:bg-white/[0.06] whitespace-nowrap"
               >
                 {link.name}
               </Link>
@@ -76,9 +76,9 @@ export function Navbar() {
           </div>
 
           {/* Right Action Area */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 xl:gap-3">
             {/* Status Live Indicator */}
-            <div className="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-[11px] text-pearl-300">
+            <div className="hidden xl:flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-[11px] text-pearl-300 whitespace-nowrap">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-gold-500" />
@@ -93,7 +93,7 @@ export function Navbar() {
               rel="noopener noreferrer"
               className="hidden sm:inline-block"
             >
-              <MagneticButton variant="primary" className="text-xs uppercase tracking-wider py-2 px-5">
+              <MagneticButton variant="primary" className="text-xs uppercase tracking-wider py-2 px-4 xl:px-5 whitespace-nowrap">
                 <Sparkles className="w-3.5 h-3.5 text-obsidian-950 fill-current" />
                 <span>Asesoría Glow</span>
               </MagneticButton>

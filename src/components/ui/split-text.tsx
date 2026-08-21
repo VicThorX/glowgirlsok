@@ -21,7 +21,7 @@ export function SplitText({
   delay = 0.2,
   staggerDelay = 0.04,
   highlightWords = [],
-  highlightClassName = "italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-rosegold-300 via-rosegold-200 to-champagne-300",
+  highlightClassName = "italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-gold-200 via-gold-300 to-amber-400 pr-[0.12em] inline-block",
 }: SplitTextProps) {
   const words = children.split(" ");
 
@@ -39,17 +39,15 @@ export function SplitText({
   const wordVariants: Variants = {
     hidden: {
       opacity: 0,
-      y: 36,
-      rotateX: -40,
-      filter: "blur(6px)",
+      y: 28,
+      filter: "blur(4px)",
     },
     visible: {
       opacity: 1,
       y: 0,
-      rotateX: 0,
       filter: "blur(0px)",
       transition: {
-        duration: 0.9,
+        duration: 0.8,
         ease: [0.16, 1, 0.3, 1], // Non-linear luxury inertia easing
       },
     },
@@ -63,7 +61,7 @@ export function SplitText({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
-      className={cn("inline-block perspective-1000", className)}
+      className={cn("inline-block overflow-visible", className)}
     >
       {words.map((word, i) => {
         const cleanWord = word.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ&]/g, "");
@@ -72,11 +70,11 @@ export function SplitText({
         );
 
         return (
-          <span key={i} className="inline-block overflow-hidden pb-2 mr-[0.25em] last:mr-0 align-bottom">
+          <span key={i} className="inline-block overflow-visible mr-[0.28em] last:mr-0 align-baseline py-1 -my-1">
             <motion.span
               variants={wordVariants}
               className={cn(
-                "inline-block gpu-layer",
+                "inline-block gpu-layer overflow-visible leading-[1.25] pb-1",
                 isHighlighted ? highlightClassName : "text-white"
               )}
             >

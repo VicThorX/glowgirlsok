@@ -20,25 +20,25 @@ export function BentoGrid() {
       : PRODUCTS.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="colecciones" className="relative py-24 sm:py-32 px-4 sm:px-6 md:px-12">
+    <section id="colecciones" className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-16 gap-6 sm:gap-8">
           <div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-200 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
               <Sparkles className="w-3 h-3 text-gold-300" />
               Colecciones Insignia
             </div>
-            <h2 className="font-serif text-3xl sm:text-5xl font-light text-white tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-white tracking-tight">
               Cosmética Botánica & Cuidado Capilar
             </h2>
           </div>
 
           {/* Category Filter Pills */}
-          <div className="flex items-center gap-2 p-1.5 rounded-full bg-white/[0.03] border border-gold-400/20 backdrop-blur-md self-start md:self-auto">
+          <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 p-1.5 rounded-2xl sm:rounded-full bg-white/[0.03] border border-gold-400/20 backdrop-blur-md self-start md:self-auto">
             <button
               onClick={() => setActiveCategory("all")}
-              className={`px-4 py-2 rounded-full text-xs font-medium tracking-wider transition-all cursor-pointer ${
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-medium tracking-wider transition-all cursor-pointer ${
                 activeCategory === "all"
                   ? "bg-gold-400/20 text-white border border-gold-400/40 shadow-sm"
                   : "text-pearl-300 hover:text-white"
@@ -48,7 +48,7 @@ export function BentoGrid() {
             </button>
             <button
               onClick={() => setActiveCategory("skincare")}
-              className={`px-4 py-2 rounded-full text-xs font-medium tracking-wider transition-all cursor-pointer ${
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-medium tracking-wider transition-all cursor-pointer ${
                 activeCategory === "skincare"
                   ? "bg-gold-400/20 text-white border border-gold-400/40 shadow-sm"
                   : "text-pearl-300 hover:text-white"
@@ -58,7 +58,7 @@ export function BentoGrid() {
             </button>
             <button
               onClick={() => setActiveCategory("haircare")}
-              className={`px-4 py-2 rounded-full text-xs font-medium tracking-wider transition-all cursor-pointer ${
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-medium tracking-wider transition-all cursor-pointer ${
                 activeCategory === "haircare"
                   ? "bg-gold-400/20 text-white border border-gold-400/40 shadow-sm"
                   : "text-pearl-300 hover:text-white"
@@ -95,7 +95,7 @@ export function BentoGrid() {
                 >
                   <SpotlightCard
                     onClick={() => setSelectedProduct(product)}
-                    className="h-full flex flex-col justify-between cursor-pointer p-6 sm:p-8 border border-gold-400/30 hover:border-gold-300/70 hover:shadow-glow-gold-card bg-gradient-to-b from-obsidian-850/70 to-obsidian-900/90"
+                    className="h-full flex flex-col justify-between cursor-pointer p-5 sm:p-7 md:p-8 border border-gold-400/30 hover:border-gold-300/70 hover:shadow-glow-gold-card bg-gradient-to-b from-obsidian-850/70 to-obsidian-900/90"
                   >
                     {/* Top Row: Tags & Price */}
                     <div className="flex items-center justify-between mb-4">

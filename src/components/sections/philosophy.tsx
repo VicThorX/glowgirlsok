@@ -61,15 +61,15 @@ const RITUAL_STEPS = [
 
 export function Philosophy() {
   return (
-    <section id="filosofia" className="relative py-24 sm:py-32 px-4 sm:px-6 md:px-12 border-t border-white/[0.06]">
+    <section id="filosofia" className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-12 border-t border-gold-400/15">
       <div className="max-w-7xl mx-auto">
         {/* Top Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 md:mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-200 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
             <Sparkles className="w-3 h-3 text-gold-300" />
             Manifiesto Glowgirlsok
           </div>
-          <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl font-light text-white tracking-tight mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight mb-4 sm:mb-6">
             La Alquimia entre Naturaleza & Ciencia
           </h2>
           <p className="text-pearl-300 text-sm sm:text-base leading-relaxed">
@@ -78,11 +78,11 @@ export function Philosophy() {
         </div>
 
         {/* 3 Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-28">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-16 sm:mb-24">
           {PILLARS.map((pillar, i) => {
             const Icon = pillar.icon;
             return (
-              <SpotlightCard key={i} className="flex flex-col justify-between p-8 border border-gold-400/25 hover:border-gold-300/60">
+              <SpotlightCard key={i} className="flex flex-col justify-between p-6 sm:p-8 border border-gold-400/25 hover:border-gold-300/60">
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-gold-400/10 border border-gold-400/30 flex items-center justify-center text-gold-300 mb-6 group-hover:scale-110 transition-transform shadow-glow-gold">
                     <Icon className="w-6 h-6" />
@@ -96,7 +96,7 @@ export function Philosophy() {
         </div>
 
         {/* Ritual Section */}
-        <div id="rituales" className="relative rounded-3xl border border-gold-400/30 bg-gradient-to-b from-obsidian-850/70 to-obsidian-900/90 p-8 sm:p-12 md:p-16 backdrop-blur-xl overflow-hidden shadow-glow-gold-card">
+        <div id="rituales" className="relative rounded-3xl border border-gold-400/30 bg-gradient-to-b from-obsidian-850/70 to-obsidian-900/90 p-6 sm:p-10 md:p-14 backdrop-blur-xl overflow-hidden shadow-glow-gold-card">
           {/* Subtle Ambient Halo in Card */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-gold-400/10 blur-[100px] pointer-events-none" />
 

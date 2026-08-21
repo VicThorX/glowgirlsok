@@ -42,7 +42,7 @@ export function Hero() {
   return (
     <>
       <TubesBackground
-        className="min-h-[96vh] flex items-center justify-center pt-28 sm:pt-36 pb-20 px-4 sm:px-6 md:px-12"
+        className="min-h-[92vh] flex items-center justify-center pt-24 sm:pt-28 md:pt-32 lg:pt-28 xl:pt-32 pb-14 sm:pb-20 px-4 sm:px-6 md:px-8 lg:px-12"
         opacity={0.8}
       >
         <section
@@ -51,7 +51,7 @@ export function Hero() {
         >
         <motion.div
           style={{ y: heroY, opacity }}
-          className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center"
+          className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 xl:gap-10 items-center"
         >
           {/* Left Column: Headline & Editorial Lead */}
           <div className="lg:col-span-7 flex flex-col items-start text-left z-20">
@@ -60,22 +60,22 @@ export function Hero() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-400/10 border border-gold-400/30 backdrop-blur-md mb-6 shadow-glow-subtle group hover:border-gold-300/60 transition-colors"
+              className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-gold-400/10 border border-gold-400/30 backdrop-blur-md mb-4 sm:mb-6 shadow-glow-subtle group hover:border-gold-300/60 transition-colors"
             >
               <Sparkles className="w-3.5 h-3.5 text-gold-300 animate-pulse" />
-              <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-gold-200">
+              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-gold-200">
                 Cosmética Botánica · Capilar · Skincare
               </span>
             </motion.div>
 
             {/* Split-Text Cinematic Heading */}
-            <div className="mb-6">
+            <div className="mb-4 sm:mb-6 overflow-visible">
               <SplitText
                 tag="h1"
                 delay={0.1}
                 staggerDelay={0.04}
                 highlightWords={["Alquimia", "Piel", "Cabello", "Radiante"]}
-                className="font-serif text-4xl sm:text-6xl md:text-7xl font-light text-white tracking-tight leading-[1.06]"
+                className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[42px] xl:text-[52px] 2xl:text-6xl font-light text-white tracking-tight leading-[1.16] sm:leading-[1.14] lg:leading-[1.12] pb-1 overflow-visible"
               >
                 La Alquimia de una Piel y Cabello Radiante
               </SplitText>
@@ -86,7 +86,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="text-base sm:text-lg text-pearl-300/90 font-normal leading-relaxed max-w-2xl mb-8"
+              className="text-sm sm:text-base lg:text-base xl:text-lg text-pearl-300/90 font-normal leading-relaxed max-w-2xl mb-6 sm:mb-8"
             >
               Combinamos hidrolatos puros y extractos botánicos vírgenes con biotecnología celular de máxima eficacia. Despierta la luminosidad intrínseca de tu rostro y la vitalidad de tu cabello.
             </motion.p>
@@ -96,12 +96,12 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-              className="mb-8 w-full max-w-xl"
+              className="mb-6 sm:mb-8 w-full max-w-xl"
             >
-              <span className="text-[10px] uppercase tracking-[0.25em] text-gold-300/90 font-semibold block mb-3">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-gold-300/90 font-semibold block mb-2.5">
                 Explorar Fórmulas Clave:
               </span>
-              <div className="flex flex-wrap gap-2 p-1.5 rounded-2xl bg-white/[0.03] border border-gold-400/15 backdrop-blur-md">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2 p-1.5 rounded-2xl bg-white/[0.03] border border-gold-400/15 backdrop-blur-md">
                 {HERO_SHOWCASE_IDS.map((id) => {
                   const prod = PRODUCTS.find((p) => p.id === id);
                   if (!prod) return null;
@@ -112,7 +112,7 @@ export function Hero() {
                       onClick={() => setActiveProductId(id)}
                       data-cursor
                       data-cursor-text="Ver"
-                      className={`px-3 py-1.5 rounded-xl text-xs font-medium tracking-wide transition-all duration-300 cursor-pointer ${
+                      className={`px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl text-[11px] sm:text-xs font-medium tracking-wide transition-all duration-300 cursor-pointer ${
                         isActive
                           ? "bg-gold-400/20 text-white border border-gold-400/50 shadow-[0_0_15px_rgba(216,180,74,0.25)]"
                           : "text-pearl-400 hover:text-white hover:bg-white/[0.04]"
@@ -181,7 +181,7 @@ export function Hero() {
           </div>
 
           {/* Right Column: 3D Depth Multi-Layered Showcase */}
-          <div className="lg:col-span-5 relative flex items-center justify-center min-h-[480px] sm:min-h-[560px]">
+          <div className="lg:col-span-5 relative flex items-center justify-center min-h-[360px] sm:min-h-[440px] lg:min-h-[500px]">
             {/* Luminous Glow Halo */}
             <div className="absolute w-80 sm:w-[420px] h-80 sm:h-[420px] rounded-full bg-gold-400/15 blur-[110px] pointer-events-none" />
 
@@ -191,7 +191,7 @@ export function Hero() {
               initial={{ opacity: 0, x: -40, y: 30 }}
               animate={{ opacity: 1, x: 0, y: 0 }}
               transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="hidden sm:block absolute -left-8 top-8 z-10 w-44 animate-float-gentle"
+              className="hidden xl:block absolute -left-6 2xl:-left-10 top-6 z-10 w-36 2xl:w-44 animate-float-gentle"
             >
               <Card3DTilt
                 maxTilt={16}
@@ -219,7 +219,7 @@ export function Hero() {
             </motion.div>
 
             {/* Centerpiece Hero Dynamic Card */}
-            <div className="relative z-20 w-full max-w-[340px] sm:max-w-[380px]">
+            <div className="relative z-20 w-full max-w-[300px] sm:max-w-[340px] xl:max-w-[360px] 2xl:max-w-[380px]">
               <AnimatePresence mode="popLayout">
                 <motion.div
                   key={activeProduct.id}
@@ -248,7 +248,7 @@ export function Hero() {
                         src={activeProduct.image}
                         alt={activeProduct.name}
                         fill
-                        sizes="(max-width: 768px) 320px, 380px"
+                        sizes="(max-width: 768px) 300px, 380px"
                         priority
                         className="object-contain p-2 transition-transform duration-700 group-hover/img:scale-108"
                       />
@@ -287,7 +287,7 @@ export function Hero() {
               initial={{ opacity: 0, x: 40, y: -30 }}
               animate={{ opacity: 1, x: 0, y: 0 }}
               transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="hidden sm:block absolute -right-8 bottom-4 z-10 w-44 animate-float-delayed"
+              className="hidden xl:block absolute -right-6 2xl:-right-10 bottom-4 z-10 w-36 2xl:w-44 animate-float-delayed"
             >
               <Card3DTilt
                 maxTilt={16}
@@ -318,7 +318,7 @@ export function Hero() {
       </section>
 
       {/* Discreet 3D WebGL Atmosphere Indicator */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-obsidian-950/60 border border-gold-400/20 backdrop-blur-md text-[10px] text-pearl-400">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-obsidian-950/60 border border-gold-400/20 backdrop-blur-md text-[10px] text-pearl-400">
         <span className="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse" />
         <span className="tracking-widest uppercase">Click en el fondo para alternar atmósfera 3D</span>
       </div>
