@@ -115,15 +115,20 @@ export function BentoGrid() {
                     {/* Center Image with Glow Backdrop */}
                     <div
                       className={`relative w-full ${
-                        isLargeCard ? "aspect-[16/10] sm:aspect-[21/9]" : "aspect-[4/3] sm:aspect-[1/1]"
+                        isLargeCard ? "aspect-[16/9] sm:aspect-[21/9]" : "aspect-[4/3] sm:aspect-[1/1]"
                       } rounded-2xl overflow-hidden bg-obsidian-950/70 border border-gold-400/15 mb-6 flex items-center justify-center group/img`}
                     >
                       <Image
-                        src={product.image}
+                        src={isLargeCard && product.bannerImage ? product.bannerImage : product.image}
                         alt={product.name}
                         fill
                         sizes={isLargeCard ? "(max-width: 768px) 100vw, 66vw" : "(max-width: 768px) 100vw, 33vw"}
-                        className="object-contain p-4 transition-transform duration-700 group-hover/img:scale-105"
+                        priority={isLargeCard}
+                        className={`${
+                          isLargeCard
+                            ? "object-cover object-center transition-transform duration-700 group-hover/img:scale-105"
+                            : "object-contain p-4 transition-transform duration-700 group-hover/img:scale-105"
+                        }`}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-obsidian-950/80 via-transparent to-transparent pointer-events-none" />
 

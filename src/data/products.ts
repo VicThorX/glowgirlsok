@@ -7,6 +7,7 @@ export interface Product {
   tagline: string;
   description: string;
   image: string;
+  bannerImage?: string;
   volume: string;
   price: number;
   highlightKey: string;
@@ -29,6 +30,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Formulado con hidrolato de rosas 100% puro. Tonifica, hidrata intensamente y restablece el equilibrio del pH cutáneo, dejando un halo de frescura y luminosidad inmediata.",
     image: "/products/tonico-rosas.png",
+    bannerImage: "/products/tonico-rosas-banner.jpg",
     volume: "100 ml",
     price: 18500,
     highlightKey: "Hidrolato de Rosas Puro",
